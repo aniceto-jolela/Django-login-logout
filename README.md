@@ -31,3 +31,4 @@ ORM, Views, Templates and Middleware.
 - Project -> [authentication](authentication)
 - Site -> [blog](authentication/blog)
 - Env -> [environment](environment)
+- DB -> [db.sqlite3](authentication/db.sqlite3)
