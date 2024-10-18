@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <a href="{% url 'home' %}" >Back</a>
+    <fieldset>
+        <legend>Register</legend>
+        <form method="POST">
+            {{ frm.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </fieldset>
+</body>
+</html>
