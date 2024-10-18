@@ -9,6 +9,7 @@
     <fieldset>
         <legend>Register</legend>
         <form method="POST">
+            {% csrf_token %}
             {{ frm.as_p }}
             <button type="submit">Submit</button>
         </form>
