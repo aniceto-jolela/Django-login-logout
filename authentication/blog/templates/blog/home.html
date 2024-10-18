@@ -5,10 +5,17 @@
     <title>Home</title>
 </head>
 <body>
-    <a href="{% url 'register' %}" >Register</a> |
-    <a href="{% url 'about' %}" >About</a> |
-    <a href="{% url 'login' %}">Login</a> |
-    <a href="{% url 'profile' %}">Profile</a>
+    {% if user.is_authenticated %}
+        <a href="{% url 'profile' %}">Profile</a> |
+        <a href="{% url 'about' %}" >About</a> |
+        <form method="POST" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit" >Sign Out</button>
+        </form>
+    {% else %}
+        <a href="{% url 'login' %}">Sign In</a> |
+        <a href="{% url 'register' %}" >Register</a> |
+    {% endif %}
     <br/>
     <h1>Welcome in Home</h1>
 </body>
