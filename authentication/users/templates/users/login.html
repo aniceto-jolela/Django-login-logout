@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <a href="{% url 'home' %}" >Back</a> <br/>
+     {% if messages %}
+        {% for sms in messages %}
+            <small>{{ sms }}</small>
+        {% endfor %}
+    {% endif %}
+    <fieldset>
+        <legend>Login</legend>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" >Submit</button>
+        </form>
+    </fieldset>
+</body>
+</html>

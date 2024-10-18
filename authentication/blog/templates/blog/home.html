@@ -6,13 +6,9 @@
 </head>
 <body>
     <a href="{% url 'register' %}" >Register</a> |
-    <a href="{% url 'about' %}" >About</a>
+    <a href="{% url 'about' %}" >About</a> |
+    <a href="{% url 'login' %}">Login</a>
     <br/>
-    {% if messages %}
-        {% for sms in messages %}
-            <small>{{ sms }}</small>
-        {% endfor %}
-    {% endif %}
     <h1>Welcome in Home</h1>
 </body>
 </html>
