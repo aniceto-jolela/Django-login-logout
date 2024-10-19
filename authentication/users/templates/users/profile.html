@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Profile</title>
-</head>
-<body>
-    <a href="{% url 'home' %}" >Back</a> <br/>
+{% extends 'blog/base.html' %}
+{% block content %}
     {{ user.username }}
     <br/>
     {{ user.email }}
-</body>
-</html>
+{% endblock %}

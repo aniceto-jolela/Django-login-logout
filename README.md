@@ -25,6 +25,10 @@ ORM, Views, Templates and Middleware.
 - Authentication
 - Authorization
 - https
+
+#### Install this plugin using pip:
+    $ pip install crispy-bootstrap4
+
 #
 ##### URLs:
 

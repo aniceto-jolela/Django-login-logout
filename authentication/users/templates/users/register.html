@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Register</title>
-</head>
-<body>
-    <a href="{% url 'home' %}" >Back</a>
-    <fieldset>
-        <legend>Register</legend>
-        <form method="POST">
-            {% csrf_token %}
-            {{ frm.as_p }}
-            <button type="submit">Submit</button>
-        </form>
-    </fieldset>
-</body>
-</html>
+{% extends 'blog/home.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+<div class='content-section'>
+	<form method="POST">
+	    {% csrf_token %}
+	    <fieldset class='form-group'>
+		<legend class="border-bottom mb-4" >Register</legend>
+		    
+		    {{ frm| crispy }}
+		    <button class='btn btn-otuline-info' type="submit">Sign up</button>
+	    </fieldset>
+	</form>
+	<div class='border-top pt-3'>
+		<smal class='text-muted'>
+			Already Have An Account?
+			<a class='ml-2' href='{% url "login" %}'>Sign In</a>
+		</small>
+	</div>
+</div>
+{% endblock %}

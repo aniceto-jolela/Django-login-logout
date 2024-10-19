@@ -1,23 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-</head>
-<body>
-    <a href="{% url 'home' %}" >Back</a> <br/>
+{% extends 'blog/home.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+ <div class='content-section'>
      {% if messages %}
         {% for sms in messages %}
             <small>{{ sms }}</small>
         {% endfor %}
     {% endif %}
-    <fieldset>
-        <legend>Login</legend>
-        <form method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" >Sign In</button>
-        </form>
-    </fieldset>
-</body>
-</html>
+    <form method="POST">
+     	{% csrf_token %}
+    	<fieldset class='form-group'>
+		<legend class="border-bottom mb-4">Login</legend>	   
+		 {{ form | crispy }}
+		 <button class='btn btn-otuline-info' type="submit" >Sign In</button>
+    	</fieldset>
+    </form>
+	<div class='border-top pt-3'>
+	<smal class='text-muted'>
+		Need An Account?
+		<a class='ml-2' href='{% url "register" %}'>Sign Up Now</a>
+	</small>
+	</div>
+</div>
+{% endblock %}
