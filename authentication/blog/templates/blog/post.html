@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Post</title>
-</head>
-<body>
-    <h3>I'm  here.</h3>
-</body>
-</html>
+{% extends 'blog/home.html' %}
+{% block content %}
+    <h3>A little bit Dev!</h3>
+    {% for post in day_dev %}
+        <h4>{{post.author}}</h4>
+        <p>{{post.post}}</p>
+    {% endfor %}
+{% endblock %}
