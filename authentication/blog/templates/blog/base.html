@@ -1,5 +1,4 @@
 {% load static %}
-<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -48,10 +47,14 @@
             </div>
           </div>
         </nav>
-
     <br/> <br/>
+    {% if messages %}
+        {% for sms in messages %}
+            <div class='alert alert-{{sms.tags}}'>{{ sms }}</div> </br>
+        {% endfor %}
+    {% endif %}
     <div class="container">
-        {% block content %} {% endblock content %}
+        {% block content %} {% endblock %}
     </div>
 
 

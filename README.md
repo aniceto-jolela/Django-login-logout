@@ -26,8 +26,9 @@ ORM, Views, Templates and Middleware.
 - Authorization
 - https
 
-#### Install this plugin using pip:
-    $ pip install crispy-bootstrap4
+#### Plugin using pip:
+- django-crispy-forms
+- crispy-bootstrap4
 
 #
 ##### URLs:

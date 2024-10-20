@@ -1,6 +1,6 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-    {{ user.username }}
-    <br/>
-    {{ user.email }}
+    <h3> User: {{ user.username }} </h3>
+    
+    <h5> Email: {{ user.email }} </h5>
 {% endblock %}
