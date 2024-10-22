@@ -33,7 +33,10 @@ ORM, Views, Templates and Middleware.
 #
 ##### URLs:
 
-- Project -> [authentication](authentication)
-- Site -> [blog](authentication/blog)
-- Env -> [environment](environment)
-- DB -> [db.sqlite3](authentication/db.sqlite3)
+- `Project` ⇢ [authentication](authentication)
+- `Site` ⇢ [blog](authentication/blog)
+- `Env` ⇢ [environment](environment)
+- `DB` ⇢ [db.sqlite3](authentication/db.sqlite3)
+- [Deploy on Render](https://github.com/aniceto-jolela/tips/blob/main/django/DJANGO-DEPLOY-RENDER.md)
+- [Render](https://render.com/)
+- [Web Site](https://django-login-logout.onrender.com)
